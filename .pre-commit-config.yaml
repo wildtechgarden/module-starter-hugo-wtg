@@ -10,7 +10,7 @@ ci:
   submodules: true
 
 fail_fast: true
-minimum_pre_commit_version: 3.3.3
+minimum_pre_commit_version: 3.2.1
 
 # yamllint disable rule:key-ordering
 repos:
