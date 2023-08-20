@@ -145,10 +145,6 @@ disabled = true
 source = "static"
 target = "static"
 
-[[module.mounts]]
-source = "archetypes"
-target = "archetypes"
-
 [[module.imports]]
 path = "github.com/wildtechgarden/demo-test-site-hugo-wtg"
 
