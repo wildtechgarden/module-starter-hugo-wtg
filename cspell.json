@@ -75,7 +75,8 @@
 				"./README.fr.md"
 			],
 			"ignoreRegExpList": [
-				"frontMatter"
+				"frontMatter",
+				"hugoShortcode"
 			],
 			"includeRegExpList": [
 				".*"
@@ -93,7 +94,8 @@
 				"./README.md"
 			],
 			"ignoreRegExpList": [
-				"frontMatter"
+				"frontMatter",
+				"hugoShortcode"
 			],
 			"includeRegExpList": [
 				".*"
@@ -154,6 +156,10 @@
 		{
 			"name": "frontMatter",
 			"pattern": "/^(-{3}|[+]{3})$(\\s|\\S)*?^\\1$/gm"
+		},
+		{
+			"name": "hugoShortcode",
+			"pattern": "/[{]{2,}[<]\\s+[\\S\\s]*?\\s+[>][}]{2,}/gm"
 		}
 	],
 	"version": "0.2"
