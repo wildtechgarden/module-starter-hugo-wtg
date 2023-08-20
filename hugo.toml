@@ -1,0 +1,14 @@
+name = "New Hugo module by Wild Tech 'Garden'"
+copyright = "© 2023 Wild Tech 'Garden'"
+description = "TBD"
+
+[module]
+[module.hugoVersion]
+min = "0.115.3"
+extended = false
+
+[author]
+name = "Daniel F. Dickinson for Wild Tech 'Garden'"
+homepage = "https://www.danielfdickinson.ca/"
+copyright = "© 2023 Wild Tech 'Garden'"
+email = "dfdpublic@wildtechgarden.ca"

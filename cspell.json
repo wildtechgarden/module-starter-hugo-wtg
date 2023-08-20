@@ -1,0 +1,160 @@
+{
+	"$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+	"dictionaries": [
+		"project-words",
+		"project-words-fr"
+	],
+	"dictionaryDefinitions": [
+		{
+			"addWords": true,
+			"name": "project-words",
+			"path": "./words-project.txt"
+		},
+		{
+			"addWords": true,
+			"name": "project-words-fr",
+			"path": "./words-fr-project.txt"
+		}
+	],
+	"ignorePaths": [
+		"./go.{mod,sum}",
+		"node_modules",
+		"./cspell.json",
+		"./LICENSE",
+		"./package.json",
+		"./package-lock.json",
+		"./.pre-commit-config.yaml",
+		"./words-*.txt",
+		"_vendor"
+	],
+	"ignoreRegExpList": [],
+	"ignoreWords": [],
+	"import": [
+		"@cspell/dict-fr-fr/cspell-ext.json",
+		"@cspell/dict-fr-reforme/cspell-ext.json"
+	],
+	"language": "en,en-gb,en-us",
+	"overrides": [
+		{
+			"dictionaries": [
+				"companies",
+				"html",
+				"css",
+				"softwareTerms",
+				"misc"
+			],
+			"filename": [
+				"./layouts/**/*.html",
+				"config.toml",
+				"hugo.toml",
+				"theme.toml"
+			],
+			"language": "en,en-gb,en-us,fr,fr-90"
+		},
+		{
+			"dictionaries": [
+				"companies",
+				"html",
+				"css",
+				"softwareTerms",
+				"misc"
+			],
+			"filename": [
+				"./assets/**/*.{css,scss}",
+				"./assets/*.{css,scss}"
+			]
+		},
+		{
+			"dictionaries": [
+				"companies",
+				"softwareTerms",
+				"misc"
+			],
+			"filename": [
+				"./content/fr/**/*.md",
+				"./README.fr.md"
+			],
+			"ignoreRegExpList": [
+				"frontMatter"
+			],
+			"includeRegExpList": [
+				".*"
+			],
+			"language": "fr,fr-90"
+		},
+		{
+			"dictionaries": [
+				"companies",
+				"softwareTerms",
+				"misc"
+			],
+			"filename": [
+				"./content/en/**/*.md",
+				"./README.md"
+			],
+			"ignoreRegExpList": [
+				"frontMatter"
+			],
+			"includeRegExpList": [
+				".*"
+			],
+			"language": "en,en-gb"
+		},
+		{
+			"dictionaries": [
+				"css",
+				"html"
+			],
+			"filename": [
+				".htmlvalidate*.json"
+			]
+		},
+		{
+			"dictionaries": [
+				"bash",
+				"softwareTerms"
+			],
+			"filename": [
+				"./tests/scripts/*.sh"
+			],
+			"language": "en,en-gb"
+		},
+		{
+			"dictionaries": [
+				"powershell",
+				"softwareTerms"
+			],
+			"filename": [
+				"./tests/scripts/*.ps1"
+			],
+			"language": "en,en-gb"
+		},
+		{
+			"dictionaries": [
+				"companies",
+				"project-words-fr"
+			],
+			"filename": [
+				"./i18n/fr.toml",
+				"./.pre-commit-config.yaml"
+			],
+			"language": "en,en-gb,fr,fr-90"
+		},
+		{
+			"dictionaries": [
+				"python",
+				"project-words"
+			],
+			"filename": [
+				"./requirements.txt"
+			]
+		}
+	],
+	"patterns": [
+		{
+			"name": "frontMatter",
+			"pattern": "/^(-{3}|[+]{3})$(\\s|\\S)*?^\\1$/gm"
+		}
+	],
+	"version": "0.2"
+}
