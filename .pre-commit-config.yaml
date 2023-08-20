@@ -52,8 +52,8 @@ repos:
   # replaces or checks mixed line ending.
   - id: no-commit-to-branch # - don't commit to branch
     args: [
-      #  --branch,
-      #  main,
+      --branch,
+      main,
       --branch,
       "v0.[0-9]" # yamllint disable-line
     ]

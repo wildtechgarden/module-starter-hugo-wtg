@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../demo-test-site-hugo-wtg"
+		},
+		{
+			"path": "../../minimal-test-theme-hugo-wtg"
+		}
+	],
+	"settings": {}
+}
