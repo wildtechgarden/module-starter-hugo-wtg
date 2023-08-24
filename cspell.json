@@ -30,10 +30,11 @@
 	"ignoreRegExpList": [],
 	"ignoreWords": [],
 	"import": [
+		"@cspell/dict-en-ca/cspell-ext.json",
 		"@cspell/dict-fr-fr/cspell-ext.json",
 		"@cspell/dict-fr-reforme/cspell-ext.json"
 	],
-	"language": "en,en-gb,en-us",
+	"language": "en,en-ca,en-gb,en-us",
 	"overrides": [
 		{
 			"dictionaries": [
@@ -49,7 +50,7 @@
 				"hugo.toml",
 				"theme.toml"
 			],
-			"language": "en,en-gb,en-us,fr,fr-90"
+			"language": "en,en-ca,en-gb,en-us,fr,fr-90"
 		},
 		{
 			"dictionaries": [
@@ -100,7 +101,7 @@
 			"includeRegExpList": [
 				".*"
 			],
-			"language": "en,en-gb"
+			"language": "en,en-ca,en-gb"
 		},
 		{
 			"dictionaries": [
@@ -119,7 +120,7 @@
 			"filename": [
 				"./tests/scripts/*.sh"
 			],
-			"language": "en,en-gb"
+			"language": "en,en-ca,en-gb"
 		},
 		{
 			"dictionaries": [
@@ -129,7 +130,7 @@
 			"filename": [
 				"./tests/scripts/*.ps1"
 			],
-			"language": "en,en-gb"
+			"language": "en,en-ca,en-gb"
 		},
 		{
 			"dictionaries": [
@@ -140,7 +141,7 @@
 				"./i18n/fr.toml",
 				"./.pre-commit-config.yaml"
 			],
-			"language": "en,en-gb,fr,fr-90"
+			"language": "en,en-ca,en-gb,fr,fr-90"
 		},
 		{
 			"dictionaries": [
