@@ -110,8 +110,7 @@ mainSections = ["demo","doc"]
 redirectsDomains = [
 	"module-starter.wtg-demos.ca",
 	"module-starter.wtg-demos.com",
-	"www.module-starter.wtg-demos.com",
-	"wtgdeml.cluster051.hosting.ovh.net"
+	"www.module-starter.wtg-demos.com"
 ]
 redirectsExtra = []
 
