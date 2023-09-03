@@ -1,19 +1,29 @@
-# New Hugo module by Wild Tech 'Garden'
+# New Hugo module starter by Wild Tech 'Garden'
+
+Description: TBD  
+Repository URL: <https://github.com/wildtechgarden/module-starter-hugo-wtg>\
+Site: <https://www.module-starter.wtg-demos.ca>  
+CI Status: [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/wildtechgarden/module-starter-hugo-wtg/main.svg)](https://results.pre-commit.ci/latest/github/wildtechgarden/module-starter-hugo-wtg/main)
+
+## Contents
+
+1. [Contents](#contents)
+2. [Features](#features)
+3. [Usage](#usage)
+4. [Development](#development)
+5. [Colophon](#colophon)
+
+## Features
 
 TBD
 
-## CI Status
+## Usage
 
-[![pre-commit.ci
-status](https://results.pre-commit.ci/badge/github/wildtechgarden/module-starter-hugo-wtg/main.svg)](https://results.pre-commit.ci/latest/github/wildtechgarden/module-starter-hugo-wtg/main)
+TBD
 
-## Site
+## Development
 
-<https://www.wtg-demos.ca>
-
-## Repository URL
-
-<https://github.com/wildtechgarden/new-mod-hugo-wtg>
+TBD
 
 -------
 
