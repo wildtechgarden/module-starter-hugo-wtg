@@ -1,3 +1,4 @@
+# cspell:ignore pubdate
 baseURL = "https://www.module-starter.wtg-demos.ca/"
 copyright = "© 2023 Wild Tech 'Garden'"
 homepage = "https://www.module-starter.wtg-demos.ca/"
@@ -11,59 +12,100 @@ paginatePath = "page"
 rssLimit = 20
 timeout = "600s"
 
+# See https://gohugo.io/content-management/multilingual/
+# and https://www.regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/
 [languages]
 [languages.fr]
+contentDir = "content/fr"
+languageName = "Française"
 title = "Hugo site aux manifs aux module de démarrage"
 weight = 10
-contentDir = "content/fr"
 
 [languages.fr.params]
-description = "Site manif aux modules de démarrage aux Wild Tech 'Garden' (WTG)"
+copyright = "© 2023 Wild Tech «Garden»"
+description = "Site manif aux modules de démarrage aux Wild Tech «Garden» (WTG)"
 
 [languages.fr.menu]
 [[languages.fr.menu.main]]
 identifier = "about"
 name = "À propos"
-pageref = "readme"
+pageref = "/about"
 weight = 20
 
 [[languages.fr.menu.main]]
-identifier = "l'accessibilité"
-name = "L'accessibilité"
-pageref = "accessibility"
-weight = 30
+identifier = "doc"
+name = "Docs"
+pageRef = "/doc"
+weight = 40
+
+[[languages.fr.menu.main]]
+identifier = "demo"
+name = "Manifs"
+pageRef = "/demo"
+weight = 50
 
 [languages.en]
-title = "Hugo demo site for Wild Tech 'Garden' (WTG) modules"
-weight = 1
 contentDir = "content/en"
+languageName = "English"
+title = "Hugo demo site for WTG module starter"
+weight = 1
 
 [languages.en.params]
-description = "Demo site for Wild Tech 'Garden's modules"
+copyright = "© 2023 Wild Tech 'Garden'"
+description = "Demo site for Wild Tech 'Garden's (WTG) module starter"
 
 [languages.en.menu]
 [[languages.en.menu.main]]
 identifier = "about"
 name = "About"
-pageref = "readme"
+pageref = "/about"
 weight = 20
 
 [[languages.en.menu.main]]
 identifier = "accessibility"
 name = "Accessibility"
-pageref = "accessibility"
+pageref = "/accessibility"
 weight = 30
+
+[[languages.en.menu.main]]
+identifier = "doc"
+name = "Docs"
+pageRef = "/doc"
+weight = 40
+
+[[languages.en.menu.main]]
+identifier = "demo"
+name = "Demos"
+pageRef = "/demo"
+weight = 50
+
+[params]
+issueReportUrl = "https://github.com/wildtechgarden/module-starter-hugo-wtg/issues/new"
+mainSections = ["demo","doc"]
+redirectsDomains = [
+	"module-starter.wtg-demos.ca",
+	"module-starter.wtg-demos.com",
+	"www.module-starter.wtg-demos.com"
+]
+redirectsExtra = []
+staticFallback = false
+
+[params.authors]
+[params.authors."Daniel F. Dickinson"]
+homepage = "https://www.danielfdickinson.ca/"
+email = "dfdpublic@wildtechgarden.ca"
 
 [taxonomies]
 tag = "tags"
 
 [frontmatter]
+date = ['date', 'publishDate', 'pubdate', 'lastmod', 'modified', ':git', ':fileModTime']
 lastmod = [":git", "lastmod", ":fileModTime", "date", "publishDate"]
 
 [markup]
 [markup.goldmark]
 [markup.goldmark.parser]
-autoHeadingIDType = "github-ascii"
+autoHeadingIDType = "github"
 
 [markup.goldmark.parser.attribute]
 block = true
@@ -95,38 +137,14 @@ suffixes = ["htaccess"]
 [outputs]
 home = ["HTML", "RSS", "htaccess"]
 section = ["HTML", "RSS"]
-taxonomy = ["HTML", "RSS"]
-term = ["HTML", "RSS"]
+taxonomy = ["HTML"]
+term = ["HTML"]
 #home = ["HTML", "RSS", "JSON", "htaccess"]
 #section = ["HTML", "RSS", "JSON"]
-#taxonomy = ["HTML", "RSS", "JSON"]
-#term = ["HTML", "RSS", "JSON"]
-
-# See https://gohugo.io/content-management/multilingual/
-# and https://www.regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/
-
-[params]
-mainSections = ["demo","doc"]
-redirectsDomains = [
-	"module-starter.wtg-demos.ca",
-	"module-starter.wtg-demos.com",
-	"www.module-starter.wtg-demos.com"
-]
-redirectsExtra = []
-
-staticFallback = false
-# Disable if you don't want the test (bare-bones) CSS
-testStylesInclude = true
-# Footnotes and TableOfContents don't work properly with a base href set in <head>
-useBaseURL = false
-
-[params.author]
-name = "Daniel F. Dickinson"
-url = "https://www.danielfdickinson.ca"
-#avatar = "apple-touch-icon.png"
+#taxonomy = ["HTML"]
+#term = ["HTML"]
 
 [privacy]
-
 [privacy.vimeo]
 disabled = true
 
@@ -144,7 +162,42 @@ disabled = true
 source = "static"
 target = "static"
 
+[[module.mounts]]
+source = "content/en/demo/module-starter"
+target = "content/demo/module-starter"
+lang = "en"
+
+[[module.mounts]]
+source = "content/fr/demo/module-starter"
+target = "content/demo/module-starter"
+lang = "fr"
+
+[[module.mounts]]
+source = "content/en/doc/module-starter"
+target = "content/doc/module-starter"
+lang = "en"
+
+[[module.mounts]]
+source = "content/fr/doc/module-starter"
+target = "content/doc/module-starter"
+lang = "fr"
+
+[[module.mounts]]
+source = "README.md"
+target = "content/doc/module-starter/README.md"
+lang = "en"
+
+[[module.mounts]]
+source = "README.fr.md"
+target = "content/doc/module-starter/README.md"
+lang = "fr"
+
+[[module.mounts]]
+source = "LICENSE"
+target = "content/doc/module-starter/LICENSE"
+
 [[module.imports]]
+ignoreImports = true
 path = "github.com/wildtechgarden/demo-test-site-hugo-wtg"
 
 [[module.imports.mounts]]
@@ -182,9 +235,8 @@ target = "content"
 lang = "fr"
 
 [[module.imports]]
-path = "github.com/wildtechgarden/minimal-test-theme-hugo-wtg"
+path = "github.com/wildtechgarden/a-wild-theme-mod-hugo"
 
-[[module.imports.mounts]]
 source = "static"
 target = "static"
 
@@ -207,33 +259,3 @@ target = "i18n"
 [[module.imports.mounts]]
 source = "archetypes"
 target = "archetypes"
-
-[[module.imports.mounts]]
-source = "README.md"
-target = "content/doc/minimal-theme/README.md"
-lang = "en"
-
-[[module.imports.mounts]]
-source = "README.fr.md"
-target = "content/doc/minimal-theme/README.md"
-lang = "fr"
-
-[[module.imports.mounts]]
-source = "docs"
-target = "content/doc/minimal-theme/docs"
-lang = "en"
-
-[[module.imports.mounts]]
-source = "docs"
-target = "content/doc/minimal-theme/docs"
-lang = "fr"
-
-[[module.imports.mounts]]
-source = "LICENSE"
-target = "content/doc/minimal-theme/LICENSE"
-lang = "en"
-
-[[module.imports.mounts]]
-source = "LICENSE"
-target = "content/doc/minimal-theme/LICENSE"
-lang = "fr"
