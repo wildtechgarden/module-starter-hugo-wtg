@@ -162,37 +162,65 @@ disabled = true
 source = "static"
 target = "static"
 
-[[module.mounts]]
+[[module.imports]]
+ignoreImports = true
+path = "github.com/wildtechgarden/module-starter-hugo-wtg"
+
+[[module.imports.mounts]]
+source = "static"
+target = "static"
+
+[[module.imports.mounts]]
+source = "layouts"
+target = "layouts"
+
+[[module.imports.mounts]]
+source = "data"
+target = "data"
+
+[[module.imports.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.imports.mounts]]
+source = "i18n"
+target = "i18n"
+
+[[module.imports.mounts]]
+source = "archetypes"
+target = "archetypes"
+
+[[module.imports.mounts]]
 source = "content/en/demo/module-starter"
 target = "content/demo/module-starter"
 lang = "en"
 
-[[module.mounts]]
+[[module.imports.mounts]]
 source = "content/fr/demo/module-starter"
 target = "content/demo/module-starter"
 lang = "fr"
 
-[[module.mounts]]
+[[module.imports.mounts]]
 source = "content/en/doc/module-starter"
 target = "content/doc/module-starter"
 lang = "en"
 
-[[module.mounts]]
+[[module.imports.mounts]]
 source = "content/fr/doc/module-starter"
 target = "content/doc/module-starter"
 lang = "fr"
 
-[[module.mounts]]
+[[module.imports.mounts]]
 source = "README.md"
 target = "content/doc/module-starter/README.md"
 lang = "en"
 
-[[module.mounts]]
+[[module.imports.mounts]]
 source = "README.fr.md"
 target = "content/doc/module-starter/README.md"
 lang = "fr"
 
-[[module.mounts]]
+[[module.imports.mounts]]
 source = "LICENSE"
 target = "content/doc/module-starter/LICENSE"
 
