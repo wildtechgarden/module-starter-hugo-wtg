@@ -7,6 +7,7 @@ if [ -z "${HUGO_CACHEDIR}" ]; then
 	HUGO_CACHEDIR="$(pwd)/hugo-cache"
 fi
 
+export HUGO_MODULE_REPLACEMENTS="github.com/wildtechgarden/module-starter-hugo-wtg -> $(pwd)"
 export HUGO_RESOURCEDIR="$(pwd)/resources"
 export SITEROOT="$(pwd)"
 export SITECONFIG="$(pwd)"/tests/config/hugo.toml
