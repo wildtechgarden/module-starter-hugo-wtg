@@ -1,4 +1,4 @@
-	// cspell:ignore reforme, yzhang, ecmel, davidanson, budparr, mrmlnc
+	// cspell:ignore reforme, yzhang, ecmel, davidanson, budparr, mrmlnc, stylelintrc
 	{
 	"folders": [
 		{
@@ -20,7 +20,8 @@
 		],
 		"markdown.extension.toc.levels": "2..4",
 		"markdown.extension.toc.orderedList": true,
-		"markdown.extension.toc.unorderedList.marker": "*"
+		"markdown.extension.toc.unorderedList.marker": "*",
+		"stylelint.configFile": ".stylelintrc.json"
 	},
 	"extensions": {
 		"recommendations": [
