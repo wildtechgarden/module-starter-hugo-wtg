@@ -8,3 +8,4 @@ node_modules
 *.lock
 .env
 .disabled-env
+hugo-cache/
