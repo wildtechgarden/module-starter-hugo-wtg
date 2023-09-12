@@ -1,6 +1,6 @@
 module github.com/wildtechgarden/module-starter-hugo-wtg/tests/config
 
-go 1.21.0
+go 1.21
 
 require (
 	github.com/wildtechgarden/a-wild-theme-mod-hugo v0.1.0-beta.1 // indirect
