@@ -14,4 +14,4 @@ export CURDIR="$(pwd)"
 
 cd tests/config && hugo --gc --minify -b $BASEURL --source "$(pwd)" --destination "${TARGET}" --config "${SITECONFIG}"
 cd "${CURDIR}"
-rclone sync --progress public/ wtg-modstarter:./
+rclone sync --checksum --progress public/ wtg-modstarter:./
