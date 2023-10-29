@@ -8,7 +8,7 @@ rm -rf public
 
 export BASEURL="https://www.module-starter.wtg-demos.ca/"
 export HUGO_RESOURCEDIR="$(pwd)"/resources
-export SITECONFIG="$(pwd)"/tests/config/hugo.toml
+export SITECONFIG="$(pwd)"/tests/config/test-config.toml
 export TARGET="$(pwd)"/public
 export CURDIR="$(pwd)"
 

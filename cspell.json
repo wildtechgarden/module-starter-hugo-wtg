@@ -46,7 +46,7 @@
 			],
 			"filename": [
 				"**/layouts/**/*.html",
-				"config.toml",
+				"test-config.toml",
 				"hugo.toml",
 				"theme.toml"
 			],
